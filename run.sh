@@ -1,5 +1,8 @@
 #!/bin/sh
-echo "finish mkdir"
-docker run -d -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /root/portainer:/data portainer/portainer
+mkdir /root/portainer
+cp /root/generatemachine/portainer.yml /root/portainer/docker-compose.yml
+echo "copy success"
+cd /root/portainer
+docker-compose up -d
 echo "done"
 
