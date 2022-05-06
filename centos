@@ -1,0 +1,8 @@
+sudo passwd root
+857694840
+857694840
+su
+857694840
+echo '切换用户成功'
+
+systemctl disable firewalld
